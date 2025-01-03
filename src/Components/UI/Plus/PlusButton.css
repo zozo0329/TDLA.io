@@ -1,0 +1,10 @@
+.Plus img {
+  position: fixed;
+  top: 560px;
+  right: 15px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.Plus img:hover {
+  transform: scale(1.2);
+}
