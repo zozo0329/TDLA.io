@@ -12,7 +12,7 @@ const Modal = (props) => {
           <span className="close" onClick={closeHandler}>
             &times;
           </span>
-          <UserInput />
+          <UserInput userInputHandler={props.userInputHandler} />
         </div>
       </div>
     </>

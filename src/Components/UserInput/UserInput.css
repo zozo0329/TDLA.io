@@ -5,8 +5,7 @@
   gap: 10px;
 }
 .UserInput input {
-  width: 500px;
-  height: 30px;
+  width: 80%;
   font-size: 20px;
   padding: 7px;
   border: 2px solid black;

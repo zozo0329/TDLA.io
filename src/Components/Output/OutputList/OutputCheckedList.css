@@ -1,0 +1,15 @@
+.CheckedList {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  width: 500px;
+}
+.CheckedList ul {
+  padding: 0px;
+  margin: 0px;
+}
+.CheckedList li {
+  list-style-type: none;
+  font-size: 20px;
+  font-family: sans-serif;
+}

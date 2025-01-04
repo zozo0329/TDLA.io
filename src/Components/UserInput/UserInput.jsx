@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./UserInput.css";
 import Button from "../UI/Button/Button";
-const UserInput = () => {
+const UserInput = (props) => {
+  const [userInput, setUserInput] = useState("");
+
+  const inputHandler = (e) => {
+    setUserInput(e.target.value);
+  };
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const userInputData = {
+      userInput,
+      id: Math.random().toString(),
+    };
+    props.userInputHandler(userInputData);
+    setUserInput("");
+  };
   return (
     <>
       <div className="UserInput">
-        <form>
-          <input type="text" />
+        <form onSubmit={submitHandler}>
+          <input type="text" onChange={inputHandler} value={userInput} />
           <Button>Submit</Button>
         </form>
       </div>
