@@ -14,6 +14,7 @@ const UserInput = (props) => {
       id: Math.random().toString(),
     };
     props.userInputHandler(userInputData);
+    props.setIsActive(true);
     setUserInput("");
   };
   return (
