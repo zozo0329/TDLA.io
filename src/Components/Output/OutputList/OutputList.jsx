@@ -3,14 +3,24 @@ import "./OutputList.css";
 const OutputList = (props) => {
   const userInput = props.userInfo;
   const filterHandler = (data) => {
-    console.log(data, "TEST");
-    // props.setUserInfo()
+    props.setCheckedIsActive(true);
+    props.setUserInfo((prevState) => {
+      return prevState.filter((userData) => {
+        if (userData.id !== data.id) {
+          return true;
+        }
+        return false;
+      });
+    });
+    props.setCheckedList((prevData) => {
+      console.log("PREVDATA", [...prevData, data]);
+      return [...prevData, data];
+    });
   };
   return (
     <div className="OutputList">
       <ul>
         {userInput.map((value, i) => {
-          console.log(value, "VALUE");
           return (
             <li
               key={value.id}

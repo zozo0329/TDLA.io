@@ -1,14 +1,14 @@
 import React from "react";
 import "./OutputCheckedList.css";
-const OutputCheckedList = () => {
+const OutputCheckedList = (props) => {
+  console.log(props.checkedList);
   return (
     <div className="CheckedList">
       <ul>
-        <li>Check list Test 1</li>
-        <li>Check list Test 2</li>
-        <li>Check list Test 3</li>
-        <li>Check list Test 4</li>
-        <li>Check list Test 5</li>
+        {props.checkedList.map((value) => {
+          console.log(value, "VALUE");
+          return <li key={value.id}>{value.userInput}</li>;
+        })}
       </ul>
     </div>
   );

@@ -10,12 +10,23 @@ const Output = (props) => {
             <OutputList
               userInfo={props.userInfo}
               setUserInfo={props.setUserInfo}
+              setCheckedList={props.setCheckedList}
+              setCheckedIsActive={props.setCheckedIsActive}
             />
           )}
           {!props.isActive && <h2>No list at this moment</h2>}
         </div>
         <div className="CHecked-List">
-          <OutputCheckedList />
+          {props.checkedIsActive && (
+            <OutputCheckedList
+              userInfo={props.userInfo}
+              checkedList={props.checkedList}
+            />
+          )}
+          {/* <OutputCheckedList
+            userInfo={props.userInfo}
+            checkedList={props.checkedList}
+          /> */}
         </div>
       </div>
     </div>
