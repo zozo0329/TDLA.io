@@ -22,6 +22,8 @@
   border-radius: 15px;
   padding: 20px;
   margin-top: 100px;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
 }
 
 /* The Close Button */
@@ -41,4 +43,14 @@
   text-decoration: none;
   cursor: pointer;
   transform: scale(1.1);
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
